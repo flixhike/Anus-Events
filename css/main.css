@@ -36,13 +36,14 @@ body {
   
   .img-slider .slide.active{
     clip-path: circle(150% at 0 50%);
-    transition: 2s;
+    transition: 1s;
     transition-property: clip-path;
   }
   
   .img-slider .slide img{
     z-index: 1;
-    width: 400px;
+    width: 360px;
+    height: 400px;
     border-radius: 5px;
   }
   
@@ -154,12 +155,12 @@ body {
   
   @media (max-width: 420px){
     .img-slider{
-      width: 400px;
+      width: 360px;
       height: 400px;
     }
   
     .img-slider .slide .info{
-      padding: 5px 10px;
+      padding: 10px 10px;
     }
   
     .img-slider .slide .info h2{
