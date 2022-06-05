@@ -1,75 +1,94 @@
 <!doctype html>
 
 <html>
-
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css"/>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
 <head>
-
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0 minimal-ui">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <link href="css/main.css" rel="stylesheet">
+<title>Anu's Events Virtual Business Card</title>
 
-<title>FX Virtual Business Card-Anu's Events</title>
+<meta name="description" content="Anu's Events">
 
-<meta name="description" content="Create your Virtual Business Card at affordable price. Exclusive tool to market your business. Impress your clients and improve digital presence.">
-
-<meta name="keywords" content="Virtual Business Card-Anu's Events">
+<meta name="keywords" content="Anu's Events Virtual Business Card">
 
 <!-- Favicon -->
 
 <link rel="shortcut icon" href="img/favicon.ico" />
 
-<link href="demo-templates/common/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-<link href="css/main.css" rel="stylesheet">
 
-<link href="#" rel="stylesheet">
+<!--<link href="demo-templates/common/css/star-rating.css" rel="stylesheet">-->
 
-<link href="#" rel="stylesheet">
-
-<meta property="og:image" itemprop="image" content="http:image"/>
+<meta property="og:image" itemprop="image" content="http:#"/>
 
 <meta property="og:type" content="website" />
 
-<meta property="og:description" content="Flix Hike(Founder)" />
+<meta property="og:description" content="Anu's Events" />
+
 
 <script src="https://kit.fontawesome.com/c180f46001.js" crossorigin="anonymous"></script>
 
-<script>
+    <script>
 
             document.documentElement.style.setProperty('--theme-color', '#45AD99');
 
             document.documentElement.style.setProperty('--theme-color-light', '#FCD804');
 
-        </script>
-</head>
+    </script>
+ </head>
 
-<body>
-
-<div class="main-wrapper" id="home">
-
+ <body>
+  
+ <div class="main-wrapper" id="home">
+  
   <!--div class="companylogo"><img src="" class="img-responsive" alt="Flix Hike Studios"></div-->
+  <div class="views"><i class="fa fa-eye"></i> Views: <b id=count>0</b></div>
+  <div class="mq" > <marquee style="color:#232323;" width="60%" direction="left" height="20px">
+		Sunday Holiday | Office Timing : 11:00am to 08:00pm
+</marquee> </div>
+<style>
+.mq{
+  
+  
+}
 
-  <div class="views"><i class="fa fa-eye"></i> Views: <b>NA</b></div>
+</style>
+  <script>
+ const countEl = document.getElementById('count');
 
-  <div class="clearfix"></div>
+updateVisitCount();
 
-  <div class="headerbg">
+function updateVisitCount() {
+	fetch('https://api.countapi.xyz/update/anusevents/mypage/?amount=1')
+	.then(res => res.json())
+	.then(res => {
+		countEl.innerHTML = res.value;
+	})
+}
+ </script>
+
+  
+
+        <div class="clearfix"></div>
+
+    <div class="headerbg">
 
     <div class="personface"><img src="img/Mainface.png" class="img-responsive" alt=""  /></div>
+   </div>
 
-    
-    </div>
-
-    <div class="clearfix"></div>
+   <div class="clearfix"></div>
 
     <div class="contact-row"> <a class="contact-icon" href="tel:+917013319773"> <i class="fa fa-phone"></i> 
 
       <!-- Call --> 
 
-      </a> <a class="contact-icon" target="_blank" href="https://wa.me/917013319773?text=Got%20reference%20from%20your%20Virtual%20Business%20Card.%20Want%20to%20know%20more%20about%20your%20products%20."> <i class="fa fa-whatsapp"></i> 
+      </a> <a class="contact-icon" target="_blank" href="https://wa.me/917013319773?text=Got%20reference%20from%20your%20Virtual%20Business%20Card.%20Want%20to%20know%20more%20about%20your%20services%20."> <i class="fa fa-whatsapp"></i> 
 
       <!-- Whatsapp --> 
 
@@ -81,21 +100,20 @@
 
       <!-- Mail --> 
 
-      </a> </div>
+      </a> 
+    </div>
 
   </div>
 
-  <div class="firstpagebottom">
+ <div class="firstpagebottom">
 
     <ul class="firstpage share-btn">
 
       <li> <a href="https://www.instagram.com/anus_events/" ><i class="fab fa-instagram"></i></a> </li>
 
-      <li> <a href=""><i class="share-btn-facebook fa fa-facebook"></i></a> </li>
+      <li> <a href="https://flixhike.github.io/Anus-Events/"><i class="share-btn-facebook fa fa-facebook"></i></a> </li>
 
-      <li> <a href="https://youtube.com/channel/UCurKnmdpQ4fKboLUzT-LZSg"><i class="share-btn-twitter fa fa-youtube"></i></a> </li>
-
-            
+      <li> <a href="https://youtube.com/channel/UCurKnmdpQ4fKboLUzT-LZSg"><i class="share-btn-twitter fa fa-youtube"></i></a> </li>  
 
     </ul>
 
@@ -104,7 +122,7 @@
     <div class="share-whatsapp">
 
       <div class="input-wrapper">
-<label>+91</label>
+        <label>+91</label>
         <input id="whatsapp-input" class="input" placeholder="Enter mobile number" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
 
       </div>
@@ -133,9 +151,9 @@
 
         <tr>
 
-          <td><a target="_blank" href="#domain"> <i class="fas fa-globe"></i> </a></td>
+          <td><a target="_blank" href="http://www."> <i class="fas fa-globe"></i> </a></td>
 
-          <td><a target="_blank" href="#domain" class="contact-text"> http://anusevents.com </a></td>
+          <td><a target="_blank" href="http://www." class="contact-text"> https://anusevents.com </a></td>
 
         </tr>
 
@@ -143,7 +161,7 @@
 
           <td><a target="_blank" href="tel:+918099888448"> <i class="fas fa-phone-alt"></i> </a></td>
 
-          <td><a target="_blank" href="tel:+9170133197738" class="contact-text" > +91 8099888448 | +91 70133197738 </a></td>
+          <td><a target="_blank" href="tel:+9170133197738" class="contact-text" > +91 70133197738  |  +91 8099888448</a></td>
 
         </tr>
 
@@ -153,252 +171,355 @@
 
     <div class="p-20"></div>
 
-  </div>
+  </div> <!-- need a check-->
 
-</div>
+  </div> <!-- need a check-->
 
-<div class="page-container" id="aboutus">
+  <div class="page-container" id="aboutus">
 
-  <h2 class="section-heading">ABOUT US</h2>
-
-  <table class="about-tbl">
-
-    <tbody>
-
-      <tr>
-
-        <td class="td-label"><h3>Company Name</h3></td>
-
-        <td>:</td>
-
-        <td> ANUS EVENT'S  </td>
-
-      </tr>
-
-      <tr>
-
-        <td class="td-label"><h3>Year of Est.</h3></td>
-
-        <td>:</td>
-
-        <td> 2010 </td>
-
-      </tr>
-
-      <tr>
-
-        <td class="td-label"><h3>Nature of Business</h3></td>
-
-        <td>:</td>
-
-        <td> EVENT ORGANISER </td>
-
-      </tr>
-
-    </tbody>
-
-  </table>
-
-  <p class="about-txt">We are very short interms of disclose our about section we are in business about 10 years with well equipped staff. </p>
-
-  <p>Stop looking forward and approach us for quick and best work.</p>
-
-    <p><strong>Stop looking forward and approach us for quick and best work, it saves your a huge amount of time. </strong><br>
-
-  </p>
-
-
-  <h3>Our Services :</h3>
-
-  <ul class="unorderedList">
-
-    <li>Event Organising</li>
-    <li>Dance </li>
-    <li>Mehandi Function</li>
-    <li>SANGEET </li>
-    <li>Haldi program</li>
-    <li>Marriage eventsm and many more...</li>
-
-  </ul>
+    <h2 class="section-heading">ABOUT US</h2>
   
- <!-- /*<div class="other-links-wrapper">
+    <table class="about-tbl">
+  
+      <tbody>
+  
+        <tr>
+  
+          <td class="td-label"><h3>Company Name</h3></td>
+  
+          <td>:</td>
+  
+          <td> ANUS EVENT'S  </td>
+  
+        </tr>
+  
+        <tr>
+  
+          <td class="td-label"><h3>Year of Est.</h3></td>
+  
+          <td>:</td>
+  
+          <td> 2010 </td>
+  
+        </tr>
+  
+        <tr>
+  
+          <td class="td-label"><h3>Nature of Business</h3></td>
+  
+          <td>:</td>
+  
+          <td> EVENT ORGANISER </td>
+  
+        </tr>
+  
+      </tbody>
+  
+    </table>
+  
+    <p class="about-txt">We are very short interms of disclose our about section we are in business about 10 years with well equipped staff. </p>
+  
+    <p>Stop looking forward and approach us for quick and best work.</p>
+  
+    <h3>Our Services :</h3>
+  
+    <ul class="unorderedList">
+  
+      <li>Event Organising</li>
+      <li>Dance </li>
+      <li>Mehandi Function</li>
+      <li>SANGEET </li>
+      <li>Haldi program</li>
+      <li>Marriage eventsm and many more...</li>
+  
+    </ul>
+    </div>
+
+  
+      
+  <!--<div class="other-links-wrapper">
 
         <h3 class="other-links-header">Other Links :</h3>
 
-           <a class="other-links-link" href="https://www.justdial.com/Nellore/Ganesh-Photo-Frames-Opposite-Sai-Enterprises-Nellore-Ho/9999PX861-X861-140622163251-Z5P9_BZDET" ><i class="fa fa-external-link"></i> https://www.justdial.com/</a>
+           <a class="other-links-link" href="#" ><i class="fa fa-external-link"></i> https://www.justdial.com/</a>
 
-           <a class="other-links-link" href="javascript:void(0);" ><i class="fa fa-external-link"></i> https://www.indiamart.com/</a>
+           <a class="other-links-link" href="#" ><i class="fa fa-external-link"></i> https://www.indiamart.com/</a>
 
-  </div>*/--https://drive.google.com/file/d/1g90DaQO7yIUbelCbQkLrK18qIae3ravc/view?usp=sharing-->
+  </div>-->
 
   <h3>Documents</h3>
 
-  <a class="download" href="" download="">
+  <a class="download" href="" download target="_blank">
 
   <div class="pdf-icon"><i class="fa fa-file-pdf-o"></i></div>
 
-  <div class="pdf-number">Virtual Business Card.pdf</div>
+  <div class="pdf-number">Anu's Events.pdf</div>
 
   <div class="download-icon"><i class="fa fa-download"></i></div>
 
   </a> 
-</div>
-<!--slider start-->
-<div class="page-container" id="photogallery">
 
-    <h2 class="section-heading">GALLERY</h2>
-  
-    <div class="img-slider">
-        <div class="slide active">
-          <img src="img/IMG1-01.jpg" alt="" >
-          <div class="info">
-            <h2>Slide 01</h2>
-            <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>-->
-          </div>
-        </div>
-        <div class="slide">
-          <img src="img/IMG1-02-01.jpg" alt="">
-          <div class="info">
-            <h2></h2>
-            <p></p>
-          </div>
-        </div>
-        <div class="slide">
-          <img src="img/2.jpg" alt="" >
-          <div class="info">
-            <h2></h2>
-            <p></p>
-          </div>
-        </div>
-        <div class="slide">
-          <img src="img/3.jpg" alt="">
-          <div class="info">
-            <h2></h2>
-            <p></p>
-          </div>
-        </div>
-        <div class="slide">
-          <img src="5.jpg" alt="">
-          <div class="info">
-            <h2></h2>
-            <p></p>
-          </div>
-        </div>
-        <div class="navigation">
-          <div class="btn active"></div>
-          <div class="btn"></div>
-          <div class="btn"></div>
-          <div class="btn"></div>
-          <div class="btn"></div>
-        </div>
+ 
+ </div>
+ <div class="container" id="ourpartners">
+  <h2 class="text-center font-weight-bold">Gallery</h2>
+  <section class="customer-logos slider">
+    <div class="slide"><img src="img/1.jpg" alt="logo"></div>
+      <div class="slide"><img src="img/2.jpg" alt="logo"></div>
+      <div class="slide"><img src="img/3.jpg" alt="logo"></div>
+      <div class="slide"><img src="img/4.jpg" alt="logo"></div>
+      <div class="slide"><img src="img/5.jpg" alt="logo"></div>
+      <div class="slide"><img src="img/6.jpg" alt="logo"></div>
+      <div class="slide"><img src="img/7.jpg" alt="logo"></div>
+  </section>
+</div>
+<script>
+
+$(document).ready(function(){
+  $('.customer-logos').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2500,
+      arrows: false,
+      dots: false,
+      pauseOnHover:false,
+      responsive: [{
+          breakpoint: 768,
+          setting: {
+              slidesToShow:1
+          }
+      }, {
+          breakpoint: 520,
+          setting: {
+              slidesToShow: 1
+          }
+      }]
+  });
+});
+
+</script>
+<style>@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+  body{
+      font-family: 'Poppins', sans-serif !important;
+      background: #ffffff;
+  }
+  .container{
+      padding-top: 15px;
+      padding-bottom: 0;
+  }
+  h2{
+      text-align: center;
+      padding: 0px;
+  }
+  .slick-slide{
+      margin: -10px -px;
+  }
+  .slick-slide img{
+    align: Center;
+      width: 420px;
+      height: 300px;
+      
+  }
+  .slick-slider{
+      position: relative;
+      display: block;
+      box-sizing: border-box;
+  }
+  .slick-list{
+      position: relative;
+      display: block;
+      overflow: hidden;
+      margin: 0;
+      padding: 0px;
+  }
+  .slick-track{
+      position: relative;
+      top: 0;
+      left: 0;
+      display: block
+  }
+  .slick-slide{
+      display: none;
+      float: left;
+      height: 100%;
+      min-height: 1px;
+  }
+  .slick-slide img{
+      display: block;
+
+  }
+  .slick-initialized .slick-slide{
+      display: block;
+  }
+  .copy{
+      padding-top: -80px;
+  }</style>
+    
       </div>
   
-      <script type="text/javascript">
-      var slides = document.querySelectorAll('.slide');
-      var btns = document.querySelectorAll('.btn');
-      let currentSlide = 1;
-  
-      // Javascript for image slider manual navigation
-      var manualNav = function(manual){
-        slides.forEach((slide) => {
-          slide.classList.remove('active');
-  
-          btns.forEach((btn) => {
-            btn.classList.remove('active');
-          });
-        });
-  
-        slides[manual].classList.add('active');
-        btns[manual].classList.add('active');
-      }
-  
-      btns.forEach((btn, i) => {
-        btn.addEventListener("click", () => {
-          manualNav(i);
-          currentSlide = i;
-        });
-      });
-  
-      // Javascript for image slider autoplay navigation
-      var repeat = function(activeClass){
-        let active = document.getElementsByClassName('active');
-        let i = 1;
-  
-        var repeater = () => {
-          setTimeout(function(){
-            [...active].forEach((activeSlide) => {
-              activeSlide.classList.remove('active');
-            });
-  
-          slides[i].classList.add('active');
-          btns[i].classList.add('active');
-          i++;
-  
-          if(slides.length == i){
-            i = 0;
-          }
-          if(i >= slides.length){
-            return;
-          }
-          repeater();
-        }, 10000);
-        }
-        repeater();
-      }
-      repeat();
-      </script>
-
-      <!--Slider Ends-->
-    
-      <div class="image-wrapper"> <img onClick="openImageModal(this)" alt="" src="#" style="width:100%"> </div>
-  
-      <div class="image-wrapper"> <img onClick="openImageModal(this)" alt="" src="#" style="width:100%"> </div>
       
-    </div>
-  
 
-<div class="page-container" id="products-services">
+ <div class="page-container" id="products-services">
 
   <h2 class="section-heading">Services</h2>
 
+  
+    <div class="card">     
+    
+    <img onClick="openImageModal(this)" src="./img/Anus Events.jpg" href="#" alt="aboutus" border="0" style="width:100%; height:100%;">
+    
+
+   <br> <div class="product-enquiry-section">
+
+      <div class="product-price"> As Per Requirement </div>
+
+     <br> <a href="https://wa.me/9170133197738?text=Hi,%20I%20am%20interested%20in%20your%20service%20.%20Please%20provide%20more%20details." target="blank" class="product-enquiry-btn">Enquiry</a> </div>
+    </br>
+  </div></br>
+
   <div>
-
-    <div class="card">
-
-      <h3 class="card-title" font-size="10px">Anus Event's</h3>
-
-      <p class="product-description"></p>
-
-      <p></p>
-
-      <p></p>
-		<img onClick="openImageModal(this)" src="https://i.ibb.co/HhQ0fHh/Anus-Events-01.jpg" alt="Anus-Events-01" style="width:100%; height:100%;">
-      
-
-      <div class="product-enquiry-section">
-
-        <div class="product-price"> Price: As Per Requirement </div>
-
-        <a href="https://wa.me/917013319773?text=Hi,%20I%20am%20interested%20in%20your%20Service%20.%20Please%20provide%20more%20details." target="blank" class="product-enquiry-btn">Enquiry</a> </div>
 
     </div>
 
-  </div>
+ </div>
 
+    <!--<div class="page-container" id="payment">
+
+  <h2 class="section-heading">Payment</h2>
+
+  <div>
+
+      <table class="about-tbl">
+
+      <tbody>
+
+      <tr>
+
+    <td width="50%" class="td-label"><h3>Paytm Number</h3></td>
+
+    <td>: </td>
+
+    <td> 9000153282 </td>
+
+      </tr>
+
+       <tr>
+
+    <td width="50%" class="td-label"><h3>Phone Pe Number</h3></td>
+
+    <td>: </td>
+
+    <td> 9000153282 </td>
+
+      </tr>
+
+      <tr>
+
+    <td width="50%" class="td-label"><h3>Google Pay Number</h3></td>
+
+    <td>: </td>
+
+    <td> 9000153282 </td>
+
+      </tr>
+
+      </tbody>
+
+      </table>
+
+      <h3 align="center">Account Details:</h3>
+
+      <table class="about-tbl">
+
+       <tbody>
+
+      <tr>
+
+    <td width="50%" bgcolor="#f5f5f5" class="td-label"><h3>Bank Name</h3></td>
+
+    <td bgcolor="#f5f5f5">: </td>
+
+    <td bgcolor="#f5f5f5"> HDFC </td>
+
+      </tr>
+
+      <tr>
+
+    <td width="50%" class="td-label"><h3>Account Holder Name</h3></td>
+
+    <td>: </td>
+
+    <td> Rudra Electricals </td>
+
+      </tr>
+
+      <tr>
+
+    <td width="50%" bgcolor="#f5f5f5" class="td-label"><h3>Account Number</h3></td>
+
+    <td bgcolor="#f5f5f5">: </td>
+
+    <td bgcolor="#f5f5f5"> 59209000153282 </td>
+
+      </tr>
+
+      <tr>
+
+    <td width="50%" class="td-label"><h3>Account Type</h3></td>
+
+    <td>: </td>
+
+    <td> Current </td>
+
+      </tr>
+
+      <tr>
+
+    <td width="50%" bgcolor="#f5f5f5" class="td-label"><h3>IFSC code</h3></td>
+
+    <td bgcolor="#f5f5f5">: </td>
+
+    <td bgcolor="#f5f5f5"> HDFC0000042 </td>
+
+   </tr>
+
+   </tbody>
+
+   </table>
+
+     <br> <h3 align="center">ALL In One QR code</h3> </br>
+
+      <div align="center">
+  <img src="./img/rudra.png" alt="Whats-App-Image-2022-01-17-at-9-28-40-PM" border="0"style="width: 220px;;height:300px;> 
+      </div>
+
+    
+             <div align="Center">
+            <br><br><a align="center">Click Here:</a>
+          <a href="upi://pay?pn=RUDRA ELECTRICALS&amp;pa=rehyd2015-1@okaxis" target="blank" align="center" class="product-enquiry-btn" >Paynow</a> </td> </tr></div></br></br></div>
+     </div>-->
+    </div>
 </div>
 
+                </div>
+            </div>
+        </div>
 
-</section>
-
-
+        <div class="tc-pagination"></div>
+    </div>
 
 <div class="page-container" id="enquiry">
-
+  <script type="text/javascript">var submitted=false;</script>
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){
+  window.location='index.html';}"></iframe>
   <h2 class="section-heading">ENQUIRY FORM</h2>
 
-  <form class="enquiry-form" novalidate>
+  
+    <form  action="#" class="enquiry-form" method="post" target="hidden_iframe" onsubmit="submitted=true">
+             
 
-    <input type="text" name="enquiryName" id="enquiryName" placeholder="Enter Full Name"/>
+    <input type="text"  id="name" placeholder="Enter Full Name" required name="entry.1133902179"/>
 
     <br/>
 
@@ -406,7 +527,7 @@
 
       <div class="enquiry-phoneNumber">
 
-        <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Enter Phone Number"/>
+        <input type="text"  id="phone" placeholder="Enter Phone Number" required name="entry.1489836217"/>
 
         <br/>
 
@@ -414,7 +535,7 @@
 
       <div class="enquiry-email">
 
-        <input type="text" name="email" id="email" placeholder="Enter Email"/>
+        <input type="text"  id="email" placeholder="Enter Email" required name="entry.1320675462"/>
 
         <br/>
 
@@ -422,72 +543,22 @@
 
     </div>
 
-    <textarea name="message" id="message" placeholder="Enter Message"></textarea>
+    <textarea id="message" placeholder="Enter Message" required name="entry.1240799633"></textarea>
 
     <br/>
 
-    <input type="submit" value="Send" onClick="sendEnquiry(this, 'flixhikestudios@gmail.com')"/>
+    <input type="submit" value="Send" />
 
   </form>
 
 </div>
 
+
 <div class="copyright">
 
-  <div class="copyright-inner" style="color:red;"> All Copyright are submit to     <a href="http" target="_blank">flixhikestudios © 2019</a> </div>
+  <div class="copyright-inner" style="color:red;"> All Copyright are submit to     <a href="http" target="_blank">Flixhikestudios © 2019</a> </div>
 
 </div>
-
-
-
-<!-- Footer Menu -->
-
-<div class="footer">
-
-  <ul class="footer-menu">
-
-    <li> <a class="footer-menu-link" href="#home"> <i class="footer-menu-icon fa fa-home"></i>
-
-      <div class="footer-menu-text">HOME</div>
-
-      </a> </li>
-
-    <li> <a class="footer-menu-link" href="#aboutus"> <i class="footer-menu-icon fa fa-user"></i>
-
-      <div class="footer-menu-text">ABOUT US</div>
-
-      </a> </li>
-
-    <li> <a class="footer-menu-link" href="#photogallery"> <i class="footer-menu-icon fa fa-picture-o"></i>
-
-        <div class="footer-menu-text">GALLERY</div>
-  
-        </a> </li>
-
-    <li> <a class="footer-menu-link" href="#products-services"> <i class="footer-menu-icon fa fa-shopping-cart"></i>
-
-      <div class="footer-menu-text">SERVICES</div>
-
-      </a> </li>
-
-      <li> <a class="footer-menu-link" href="#enquiry"> <i class="footer-menu-icon fa fa-comments"></i>
-
-      <div class="footer-menu-text">ENQUIRY</div>
-
-      </a> </li>
-
-  </ul>
-
-</div>
-
-<!-- The image Modal Popup-->
-
-<div id="imageModal" class="modal"> <span class="close" id="imageModalClose">&times;</span> <img class="modal-content fadeIn" id="img01" alt="">
-
-  <div id="caption"></div>
-
-</div>
-
 <!-- The share Modal Popup -->
 
 <div id="shareModal" class="modal share-modal">
@@ -533,10 +604,49 @@
   </div>
 
 </div>
+<!-- Footer Menu -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
-  <script src="scripts.js"></script>
+<div class="footer">
+
+  <ul class="footer-menu">
+
+    <li> <a class="footer-menu-link" href="#home"> <i class="footer-menu-icon fa fa-home"></i>
+
+      <div class="footer-menu-text">HOME</div>
+
+      </a> </li>
+
+    <li> <a class="footer-menu-link" href="#aboutus"> <i class="footer-menu-icon fa fa-user"></i>
+
+      <div class="footer-menu-text">ABOUT US</div>
+
+      </a> </li>
+
+    <li> <a class="footer-menu-link" href="#ourpartners"> <i class="footer-menu-icon fa fa-picture-o"></i>
+
+        <div class="footer-menu-text">Gallery</div>
+  
+        </a> </li>
+
+    <li> <a class="footer-menu-link" href="#products-services"> <i class="footer-menu-icon fa fa-cogs"></i>
+
+      <div class="footer-menu-text">Services</div>
+
+      </a> </li>
+
+      <li> <a class="footer-menu-link" href="#enquiry"> <i class="footer-menu-icon fa fa-comments"></i>
+
+      <div class="footer-menu-text">ENQUIRY</div>
+
+      </a> </li>
+
+  </ul>
+
+</div>
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="#"></script> 
+
 
 </body>
 
